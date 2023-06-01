@@ -4,14 +4,9 @@
 import sys
 if __name__ == "__main__":
 
-    #
-    # itera sobre cada linea de codigo recibida
-    # a traves del flujo de entrada
-    #
     for line in sys.stdin:
-
-        linea_cambio = line.strip().split('  ')
-        letra = linea_cambio[0].strip()
-        fecha = linea_cambio[1].strip()
-        valor = linea_cambio[-1].strip()
-        sys.stdout.write("{}\t{}\t{}\n".format(letra,fecha,valor))
+        line_split = line.strip().split('  ')
+        letter = line_split[0].strip()
+        date = line_split[1].strip()
+        value = line_split[-1].strip()
+        sys.stdout.write("{}\t{}\t{}\n".format(letter, date, value))
